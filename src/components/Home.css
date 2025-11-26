@@ -4,7 +4,7 @@
   height: 100vh;
   background: linear-gradient(180deg, #0d2136 0%, #001428 100%);
   overflow: hidden;
-  background-image:url("./src/assets/home.jpg");
+  
   background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -105,5 +105,6 @@
   box-shadow: 0 0 25px rgb(255, 0, 0);
   background: linear-gradient(135deg, #00d4ff, #ff0000);
 }
+
 
 
