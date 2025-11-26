@@ -1,0 +1,107 @@
+/* Overall Page */
+.home-container {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(180deg, #0d2136 0%, #001428 100%);
+  overflow: hidden;
+  background-image:url("D:\React\madmax\src\assets\home.jpg");
+  background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Logo */
+.home-header {
+  padding: 20px 40px;
+}
+
+.home-logo {
+  width: 160px;
+  height: auto;
+}
+
+/* Hero */
+.hero-section {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-top: -40px; /* pushes everything slightly up */
+}
+
+/* Big faded RB31 text */
+.hero-title {
+  font-size: 22vw;
+  font-weight: 800;
+  color: rgba(255, 0, 0, 0.532);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Button placed above the car */
+.hero-btn {
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 14px 45px;
+  font-size: 20px;
+  color: #000000;
+  font-weight: 600;
+  background: linear-gradient(135deg, #ff0000, #00d4ff);
+  border: 2px solid #000000;
+  border-radius: 40px;
+  cursor: pointer;
+  z-index: 10;
+  letter-spacing: 1px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+  transition: 0.3s ease;
+  position: absolute;
+}
+
+
+.hero-btn::before,
+.hero-btn::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  width: 8px;
+  height: 20px;
+  background: rgba(255, 0, 0, 0.676);
+  border-radius: 50px;
+  animation: raindrop 1.5s infinite linear;
+}
+
+.hero-btn::after {
+  left: 70%;
+  animation-delay: 0.6s;
+}
+
+.hero-btn::before {
+  left: 30%;
+  animation-delay: 0.2s;
+}
+
+@keyframes raindrop {
+  0% {
+    opacity: 0;
+    transform: translateY(0px) scale(0.7);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(90px) scale(1);
+  }
+}
+
+.hero-btn:hover {
+  transform: translateX(-50%) scale(1.08);
+  box-shadow: 0 0 25px rgb(255, 0, 0);
+  background: linear-gradient(135deg, #00d4ff, #ff0000);
+}
